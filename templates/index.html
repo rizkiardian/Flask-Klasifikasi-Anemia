@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homepage</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div
+            class="z-[100] sticky top-0 bg-[#27ae60] border-b-2 border-black/50"
+        >
+            <nav class="flex justify-between items-center px-20 py-3">
+                <div class="flex items-center">
+                    <svg
+                        class="icon icon-tabler icon-tabler-book-2 w-10 text-[#219150]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                        ></path>
+                        <path
+                            d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"
+                        ></path>
+                        <path d="M19 16h-12a2 2 0 0 0 -2 2"></path>
+                        <path d="M9 8h6"></path>
+                    </svg>
+                    <button class="text-white font-bold text-2xl">
+                        Data Mining
+                    </button>
+                </div>
+                <div class="flex items-center">
+                    <a
+                        href="/"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Home</a
+                    >
+                    <a
+                        href="/data"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Data</a
+                    >
+                    <a
+                        href="/preprocessing"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Preprocessing</a
+                    >
+                    <a
+                        href="/modelling"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Modelling</a
+                    >
+
+                    <a
+                        href="/predict"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Prediction</a
+                    >
+                    <a
+                        href="/about-me"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >About Me</a
+                    >
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            <div
+                class="grid grid-cols-2 gap-10 px-32 min-h-[78vh] bg-[url('images/banner-bg.jpg')]"
+            >
+                <div class="flex items-center">
+                    <img src="images/anemia.png" class="w-[40rem]" />
+                </div>
+                <div class="flex items-center">
+                    <div class="text-[#27ae60]">
+                        <h1 class="text-5xl font-bold">
+                            Welcome :)
+                            <span class="text-[#27ae60] underline"></span>
+                        </h1>
+                        <h1 class="mt-5 text-5xl font-bold">
+                            Do you want to check for Anemia?
+                        </h1>
+                        <a
+                            href="/predict"
+                            class="mt-8 w-fit px-6 py-3 rounded-lg bg-[#27ae60] text-lg font-semibold text-white flex justify-center items-center hover:px-8 hover:bg-white hover:text-[#27ae60] hover:border-4 hover:border-[#27ae60] hover:transition-all group"
+                        >
+                            <button class="group-hover:font-bold">Check</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-32 py-5 bg-[#27ae60]">
+            <div class="flex justify-between py-5 font-medium">
+                <h1>&copy; 2023 Data Mining</h1>
+                <a href="#">Rizki Ardian Samudra</a>
+            </div>
+        </div>
+    </body>
+</html>

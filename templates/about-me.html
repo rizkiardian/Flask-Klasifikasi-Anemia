@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .tentang {
+                padding: 4rem;
+            }
+
+            .tentang .article {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .tentang .article .foto {
+                flex: 1 1 45rem;
+                overflow: hidden;
+            }
+
+            .tentang .article .foto .bg-foto1 {
+                background-color: #616793;
+                border-radius: 5%;
+                width: fit-content;
+                rotate: 20deg;
+                margin: auto;
+            }
+
+            .tentang .article .foto .bg-foto2 {
+                background-color: #6b719d;
+                border-radius: 5%;
+                width: fit-content;
+                rotate: -10deg;
+            }
+
+            .tentang .article .foto img {
+                background-color: #7379a5;
+                border-radius: 5%;
+                display: block;
+                margin: auto;
+                rotate: -10deg;
+                box-shadow: 0px 2px 20px #aaaaaa;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .tentang .article .deskripsi {
+                flex: 1 1 45rem;
+                text-align: justify;
+                padding: 2rem 5rem;
+            }
+
+            .tentang .article .deskripsi h2 {
+                color: rgba(0, 0, 0, 1);
+                font-size: 3rem;
+                text-transform: capitalize;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                font-weight: 600;
+            }
+
+            .tentang .article .deskripsi h5 {
+                color: rgba(0, 0, 0, 0.9);
+                font-size: 2rem;
+                letter-spacing: 0.2rem;
+                text-transform: capitalize;
+                margin-bottom: 2rem;
+                font-weight: 500;
+            }
+
+            .tentang .article .deskripsi p {
+                color: rgba(0, 0, 0, 0.8);
+                font-size: 1.7rem;
+                letter-spacing: 0.1rem;
+                line-height: 2.8rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div
+            class="z-[100] sticky top-0 bg-[#27ae60] border-b-2 border-black/50"
+        >
+            <nav class="flex justify-between items-center px-20 py-3">
+                <div class="flex items-center">
+                    <svg
+                        class="icon icon-tabler icon-tabler-book-2 w-10 text-[#219150]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                        ></path>
+                        <path
+                            d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"
+                        ></path>
+                        <path d="M19 16h-12a2 2 0 0 0 -2 2"></path>
+                        <path d="M9 8h6"></path>
+                    </svg>
+                    <button class="text-white font-bold text-2xl">
+                        Data Mining
+                    </button>
+                </div>
+                <div class="flex items-center">
+                    <a
+                        href="/"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Home</a
+                    >
+                    <a
+                        href="/data"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Data</a
+                    >
+                    <a
+                        href="/preprocessing"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Preprocessing</a
+                    >
+                    <a
+                        href="/modelling"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Modelling</a
+                    >
+
+                    <a
+                        href="/predict"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Prediction</a
+                    >
+                    <a
+                        href="/about-me"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >About Me</a
+                    >
+                </div>
+            </nav>
+        </div>
+
+        <div class="min-h-[78vh]">
+            <div class="px-32 bg-[url('images/banner-bg.jpg')]">
+                <div class="tentang">
+                    <article class="article" id="tentang">
+                        <div class="foto">
+                            <div class="bg-foto1">
+                                <div class="bg-foto2">
+                                    <img src="images/foto.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="deskripsi">
+                            <h2>Tentang Saya</h2>
+                            <h5>Mahasiswa Informatika</h5>
+                            <p>
+                                Perkenalkan nama saya Rizki Ardian Samudra atau
+                                biasa dipanggil Rizki, dan saya lahir di kota
+                                kebanggaan saya yaitu Tuban. Saya sangat
+                                menyukai hal-hal baru yang belum pernah saya
+                                temui sebelumnya, terlebih dalam bidang
+                                informatika. Dan saya juga memiliki motivasi
+                                tinggi untuk belajar lebih dalam di dunia IT.
+                                Pendidikan saya sekarang adalah kuliah di
+                                Universitas Trunojoyo Madura.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-32 py-5 bg-[#27ae60]">
+            <div class="flex justify-between py-5 font-medium">
+                <h1>&copy; 2023 Data Mining</h1>
+                <a href="#">Rizki Ardian Samudra</a>
+            </div>
+        </div>
+    </body>
+</html>

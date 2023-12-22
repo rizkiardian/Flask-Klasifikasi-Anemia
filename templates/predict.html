@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prediction</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div
+            class="z-[100] sticky top-0 bg-[#27ae60] border-b-2 border-black/50"
+        >
+            <nav class="flex justify-between items-center px-20 py-3">
+                <div class="flex items-center">
+                    <svg
+                        class="icon icon-tabler icon-tabler-book-2 w-10 text-[#219150]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                        ></path>
+                        <path
+                            d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"
+                        ></path>
+                        <path d="M19 16h-12a2 2 0 0 0 -2 2"></path>
+                        <path d="M9 8h6"></path>
+                    </svg>
+                    <button class="text-white font-bold text-2xl">
+                        Data Mining
+                    </button>
+                </div>
+                <div class="flex items-center">
+                    <a
+                        href="/"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Home</a
+                    >
+                    <a
+                        href="/data"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Data</a
+                    >
+                    <a
+                        href="/preprocessing"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Preprocessing</a
+                    >
+                    <a
+                        href="/modelling"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Modelling</a
+                    >
+
+                    <a
+                        href="/predict"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >Prediction</a
+                    >
+                    <a
+                        href="/about-me"
+                        class="px-4 py-1 text-white hover:underline rounded-full ml-10"
+                        >About Me</a
+                    >
+                </div>
+            </nav>
+        </div>
+
+        <div
+            class="flex justify-between items-start p-20 min-h-[78vh] bg-[url('images/banner-bg.jpg')]"
+        >
+            <div
+                class="w-[30rem] p-5 shadow-lg border-2 border-black/10 rounded-2xl bg-white"
+            >
+                <div>
+                    <div>
+                        <h1 class="text-center font-bold uppercase">
+                            Dataset Anemia
+                        </h1>
+                        <p class="mt-2 indent-[2rem] text-justify">
+                            Dataset ini berisi atribut Gender, Hemoglobin, MCHC,
+                            MCV, MCH, dan Results (Hasil). Digunakan untuk
+                            memprediksi apakah seorang pasien berpotensi
+                            menderita anemia.
+                        </p>
+                    </div>
+                    <ul class="list-disc list-inside mt-4">
+                        <li>
+                            <strong>Jenis Kelamin:</strong>
+                            <p class="ml-6 text-justify">
+                                Laki-laki, Perempuan
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Hemoglobin:</strong>
+                            <p class="ml-6 text-justify">
+                                Hemoglobin adalah protein dalam sel darah merah
+                                yang membawa oksigen ke organ dan jaringan tubuh
+                                serta mengangkut karbon dioksida dari organ dan
+                                jaringan tubuh kembali ke paru-paru.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>MCH:</strong>
+                            <p class="ml-6 text-justify">
+                                MCH (Mean Corpuscular Hemoglobin) adalah
+                                rata-rata jumlah hemoglobin di setiap sel darah
+                                merah. Hemoglobin ini membawa oksigen di sekitar
+                                tubuh Anda.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>MCHC:</strong>
+                            <p class="ml-6 text-justify">
+                                MCHC (Mean Corpuscular Hemoglobin Concentration)
+                                adalah konsentrasi rata-rata hemoglobin dalam
+                                satu sel darah merah. Ini adalah ukuran
+                                konsentrasi rata-rata hemoglobin dalam satu sel
+                                darah merah.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>MCV:</strong>
+                            <p class="ml-6 text-justify">
+                                MCV (Mean Corpuscular Volume) adalah volume
+                                rata-rata korpuskular merah. Tes darah MCV
+                                mengukur ukuran rata-rata sel darah merah Anda.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Results:</strong>
+                            <p class="ml-6 text-justify">
+                                Tidak Anemia, Anemia
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="p-5 w-[25rem] shadow-lg border-2 border-black/10 rounded-2xl bg-white"
+            >
+                <div>
+                    <h1 class="text-2xl text-center font-bold uppercase">
+                        Prediction Anemia
+                    </h1>
+                </div>
+                <div>
+                    <form action="/predict" method="POST">
+                        <div class="mt-5">
+                            <p class="font-medium">Gender:</p>
+                            <select
+                                name="gender"
+                                required
+                                class="focus:outline-0 mt-2 border-2 border-[#27ae60]/50 h-11 w-full pl-3 rounded-lg"
+                            >
+                                <option value="" selected disabled>
+                                    Select Gender
+                                </option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="mt-5">
+                            <p class="font-medium">Hemoglobin:</p>
+                            <input
+                                type="text"
+                                name="hemoglobin"
+                                placeholder="masukkan hemoglobin"
+                                class="focus:outline-0 mt-2 border-2 border-[#27ae60]/50 h-11 w-full pl-3 rounded-lg"
+                                pattern="[0-9]+([.,][0-9]+)?"
+                                required
+                            />
+                        </div>
+                        <div class="mt-5">
+                            <p class="font-medium">MCH:</p>
+                            <input
+                                type="text"
+                                name="mch"
+                                placeholder="masukkan mch"
+                                class="focus:outline-0 mt-2 border-2 border-[#27ae60]/50 h-11 w-full pl-3 rounded-lg"
+                                pattern="[0-9]+([.,][0-9]+)?"
+                                required
+                            />
+                        </div>
+                        <div class="mt-5">
+                            <p class="font-medium">MCHC:</p>
+                            <input
+                                type="text"
+                                name="mchc"
+                                placeholder="masukkan mchc"
+                                class="focus:outline-0 mt-2 border-2 border-[#27ae60]/50 h-11 w-full pl-3 rounded-lg"
+                                pattern="[0-9]+([.,][0-9]+)?"
+                                required
+                            />
+                        </div>
+                        <div class="mt-5">
+                            <p class="font-medium">MCV:</p>
+                            <input
+                                type="text"
+                                name="mcv"
+                                placeholder="masukkan mcv"
+                                class="focus:outline-0 mt-2 border-2 border-[#27ae60]/50 h-11 w-full pl-3 rounded-lg"
+                                pattern="[0-9]+([.,][0-9]+)?"
+                                required
+                            />
+                        </div>
+
+                        <div
+                            class="mt-8 h-11 w-full rounded-lg bg-[#27ae60] font-medium text-white flex justify-center items-center"
+                        >
+                            <button type="submit" name="submit" class="w-full">
+                                Predict
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="p-5 shadow-lg border-2 border-black/10 rounded-2xl bg-white"
+            >
+                <div class="text-lg">
+                    <p class="font-bold">Prediction Results:</p>
+                    {% if prediction %} {% if prediction == 'Tidak Anemia' %}
+                    <p class="text-green-600 font-medium">{{ prediction }}</p>
+                    {% else %}
+                    <p class="text-red-600 font-medium">{{ prediction }}</p>
+                    {% endif %} {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="px-32 py-5 bg-[#27ae60]">
+            <div class="flex justify-between py-5 font-medium">
+                <h1>&copy; 2023 Data Mining</h1>
+                <a href="#">Rizki Ardian Samudra</a>
+            </div>
+        </div>
+    </body>
+</html>
